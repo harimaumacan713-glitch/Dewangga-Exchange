@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Wallet": {
+      "title": "Wallet",
+      "description": "User wallet holding balance",
+      "type": "object",
+      "properties": {
+        "balance": {
+          "type": "number",
+          "description": "Current balance"
+        }
+      },
+      "required": ["balance"]
+    }
+  },
+  "firestore": {
+    "/exchange_wallets/{uid}": {
+      "schema": "Wallet",
+      "description": "User's e-wallet"
+    }
+  }
+}
